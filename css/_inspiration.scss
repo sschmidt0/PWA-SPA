@@ -1,0 +1,95 @@
+// ************ INSPIRATION SECTION ************
+.inspiration {
+    .innerbox {
+        // inner container till 960px expansion
+        h3 {
+            @extend %title;
+            margin-top: 20px;
+            // Medium devices (landscape tablets, 768px and up)
+            @media only screen and (min-width: 768px) {
+                margin-top: 50px;
+            }
+            // Large devices (laptops/desktops, 992px and up)
+            @media only screen and (min-width: 992px) {
+                margin-top: 60px;
+            }
+        }
+        p {
+            @extend %padding_p;
+        }
+    }
+    // // content box containing inspiration section's inner elements
+    .inspiration_fotos {
+        // media query per treure l'espai a partir de 960px
+        @media only screen and (min-width: 960px) {
+            &:first-child {
+                padding-left: 0;
+            }
+            &:last-child {
+                padding-right: 0;
+            }
+        }
+        // link boxes
+        a {
+            padding-bottom: 10px;
+            @extend %img_hover;
+            // Small devices (landscape phones, 576px and up)
+            @media (min-width: 576px) {
+                padding: 0 5px 10px 5px;
+            }
+            // each foto - inspiration element
+            .inspiration_item {
+                margin: 0;
+                padding: 0;
+                position: relative;
+                color: #fff;
+                // title
+                h5 {
+                    position: absolute;
+                    top: 50px;
+                    left: 0;
+                    text-align: center;
+                    width: 100%;
+                    font: {
+                        weight: 400;
+                        size: 30px;
+                    }
+                    // Small devices (landscape phones, 576px and up)
+                    @media (min-width: 576px) {
+                        font-size: 20px;
+                        top: 20px;
+                    }
+                }
+                // // diferent width for titles for centered positioning
+                // h5#insp1,
+                // h5#insp2 {
+                //     @include absolute-width(270px);
+                // }
+                // h5#insp3 {
+                //     @include absolute-width(250px);
+                // }
+                // h5#insp4 {
+                //     @include absolute-width(180px);
+                // }
+                // // Small devices (landscape phones, 576px and up)
+                // @media (min-width: 576px) {
+                //     font-size: 20px;
+                //     h5#insp1,
+                //     h5#insp2 {
+                //         @include absolute-width(180px);
+                //     }
+                //     h5#insp3 {
+                //         @include absolute-width(170px);
+                //     }
+                //     h5#insp4 {
+                //         @include absolute-width(110px);
+                //     }
+                // }
+                // foto
+                img {
+                    @extend %img_size;
+                }
+            }
+        }
+    }
+}

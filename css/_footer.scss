@@ -1,0 +1,66 @@
+// ************ FOOTER ************
+footer {
+    background-color: $section_bg;
+    // FIRST ROW
+    .innerbox {
+        @extend %inbox;
+        padding: 3em 0 1em 0;
+        margin-bottom: -1em;
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        // tauletes
+        @media (min-width: 768px) {
+            padding-top: 2em;
+        }
+    }
+    // linkbox es troba dintre d'innerbox però no faig un nesting per més claredat
+    .linkbox {
+        // media query per treure l'espai a partir de 960px
+        @media only screen and (min-width: 960px) {
+            &:first-child, &:last-child {
+                padding: 0;
+            }
+        }
+        h5 {
+            color: $uoc_dark;
+            font-size: 14px;
+        }
+        ul {
+            list-style-type: none;
+            li {
+                margin-top: -3px;
+                a {
+                    font-size: 14px;
+                    line-height: 200%;
+                    color: lighten($text_color, 30%);
+                    text-decoration: none;
+                    &:hover {
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+    // SECOND ROW
+    .last_line {
+        width: 100%;
+        background-color: $uoc_dark;
+        color: #fff;
+        margin-top: 1.2em;
+        padding: 1.7em;
+        text-align: center;
+        font: {
+            size: 14px;
+            weight: 100;
+        }
+        span {
+            display: inline-block;
+        }
+        // separatory line between 2 spans
+        span+span::before {
+            content: '|';
+            padding: 0 5px 0 0;
+        }
+    }
+}

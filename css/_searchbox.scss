@@ -1,0 +1,451 @@
+// ************ SEARCHBOX ************
+.searchbox {
+    position: relative;
+    .innerbox {
+        padding: 0;
+        .background-image {
+            background: url("../imatges/destacada.png");
+		    -webkit-background-size: cover;
+		    -moz-background-size: cover;
+		    -o-background-size: cover;
+		    background-size: cover;
+            //background-image: url('../imatges/destacada.png');
+            //background-color: #fff;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 600px;
+            z-index: -1;
+            // Medium devices (landscape tablets, 768px and up)
+            @media only screen and (min-width: 768px) {
+                height: 550px;
+            }
+            // Large devices (laptops/desktops, 992px and up)
+            @media only screen and (min-width: 992px) {
+                height: 400px;
+            }
+        }
+        .searchbox-content-area {
+            width: 100%;
+            h1 {
+                text-align: center;
+                margin: 40px 0;
+                color: $uoc_dark;
+                font-size: 20px;
+                // Small devices (portrait tablets and large phones, 600px and up)
+                @media only screen and (min-width: 600px) {
+                    font-size: 26px;
+                }
+                // Medium devices (landscape tablets, 768px and up)
+                @media only screen and (min-width: 768px) {
+                    font-size: 34px;
+                }
+            }
+        }
+    }
+}
+
+
+/***********************************
+            **  CONTAINER **
+***********************************/
+
+// DIV AS CONTAINER WITHIN SEARCHBOX-CONTENT-AREA
+.container_searchform {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+    //margin: 0 -20px;
+    //padding: 10px 30px 0;
+    //background-color: $uoc_dark;
+    position: relative;
+    // Medium devices (landscape tablets, 768px and up)
+    @media only screen and (min-width: 768px) {
+        margin: 0;
+        padding: 5px 20px 0;
+    }
+    // Large devices (laptops/desktops, 992px and up)
+    @media only screen and (min-width: 992px) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+
+/***********************************
+            **  NAV TABS **
+***********************************/
+
+.nav-tabs {
+    border-color: $uoc_clar;
+    margin-bottom: 14px;
+    .nav-link {
+        padding: 10px 18px;
+        background-color: #fff;
+        color: #000;
+        &:hover,
+        &:active {
+            border-color: $uoc_clar;
+            background-color: $uoc_clar;
+        }
+    }
+    .nav-link.active {
+        background-color: $uoc_dark;
+        color: #fff;
+        font-weight: 500;
+        border-color: $uoc_dark;
+    }
+}
+
+.tab-content {
+    background-color: $uoc_dark;
+}
+
+
+/***********************************
+        **  FLIGHT CONTENT **
+***********************************/
+
+// FIRST ROW
+.content_type_of_travel {
+    margin-top: -14px;
+    div.one_column {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "travel1 travel2";
+        div {
+            height: 100px;
+            // RADIO BUTTONS AS BUTTONS
+            input[type="radio"] {
+                display: none;
+                &:checked+label {
+                    background-color: $uoc_clar;
+                    font-weight: 500;
+                }
+            }
+            // LABELS
+            .type_travel1,
+            .type_travel2 {
+                display: block;
+                width: 47%;
+                background-size: 40px 100px;
+                position: absolute;
+                top: 0;
+                padding: 10px 5px;
+                margin-top: 15px;
+                background-color: #fff;
+                text-align: center;
+                cursor: pointer;
+                text-transform: uppercase;
+                font-size: 12px;
+                color: $text_color;
+                @extend %disp_flex;
+                /* Small devices (portrait tablets and large phones, 600px and up) */
+                @media only screen and (min-width: 600px) {
+                    width: 48%;
+                }
+                // Medium devices (landscape tablets, 768px and up)
+                @media only screen and (min-width: 768px) {
+                    width: 100px;
+                    margin-top: 30px;
+                    padding: 12px 6px;
+                }
+            }
+            .type_travel1 {
+                border-radius: 2px 0 0 2px;
+                grid-area: "travel1";
+            }
+            .type_travel2 {
+                border-radius: 0 2px 2px 0;
+                grid-area: "travel2";
+                // Medium devices (landscape tablets, 768px and up)
+                @media only screen and (min-width: 768px) {
+                    left: 115px;
+                }
+            }
+        }
+    }
+}
+
+// SECOND ROW - SEARCH FIELD
+.searchbox {
+    margin-top: -30px;
+    padding: 0 16px 30px;
+    // Medium devices (landscape tablets, 768px and up)
+    @media only screen and (min-width: 768px) {
+        margin-top: -14px;
+    }
+    .in_row {
+        padding: 0;
+        margin: 0;
+        &:first-child {
+            margin-bottom: 15px;
+        }
+        // Medium devices (landscape tablets, 768px and up)
+        @media only screen and (min-width: 768px) {
+            &:first-child {
+                width: 80%;
+                margin-bottom: -30px;
+            }
+            &:last-child {
+                width: 20%;
+            }
+        }
+    }
+    // inrow_grid (selectors except button)
+    .inrow_grid {
+        width: 100%;
+        margin: 0;
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+        grid-gap: 25px;
+        grid-template-areas: "origin" "destination" "date" "passengers";
+        // Medium devices (landscape tablets, 768px and up)
+        @media only screen and (min-width: 768px) {
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr;
+            grid-row-gap: 24px;
+            grid-column-gap: 15px;
+            grid-template-areas: "origen destination" "date date" "passengers passengers";
+        }
+        // Large devices (laptops/desktops, 992px and up)
+        @media only screen and (min-width: 992px) {
+            grid-template-rows: 1fr;
+            grid-template-columns: 19% 19% 40% 19%;
+            grid-gap: 5px;
+            grid-template-areas: "origen destination date passengers";
+        }
+        &:first-child {
+            grid-area: "origin";
+        }
+        &:nth-child(2) {
+            grid-area: "destination";
+        }
+        &::nth-child(3) {
+            grid-area: "date";
+        }
+        &:last-child {
+            grid-area: "passengers";
+        }
+    }
+    /***********************************
+        **  SPECIFIC HOTEL CONTENT **
+    ***********************************/
+    .hotel-grid {
+        width: 100%;
+        margin-top: 20px;
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+        grid-gap: 25px;
+        grid-template-areas: "destination-hotel" "date-hotel" "adults";
+        // Medium devices (landscape tablets, 768px and up)
+        @media only screen and (min-width: 768px) {
+            padding-top: 10px;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr;
+            grid-row-gap: 24px;
+            grid-column-gap: 15px;
+            grid-template-areas: "destination-hotel" "date-hotel date-hotel" "adults adults";
+        }
+        // Large devices (laptops/desktops, 992px and up)
+        @media only screen and (min-width: 992px) {
+            padding-bottom: 30px;
+            grid-template-rows: 1fr;
+            grid-template-columns: 19% 40% 19%;
+            grid-gap: 5px;
+            grid-template-areas: "destination-hotel date-hotel adults";
+        }
+        &:first-child {
+            grid-area: "destination-hotel";
+        }
+        &::nth-child(2) {
+            grid-area: "date-hotel";
+        }
+        &:last-child {
+            grid-area: "adults";
+        }
+    }
+    // inside form container, but located separately for clearance reasons
+    div.content {
+        height: 58px;
+        background-color: #fff;
+        margin: 0;
+        padding: 4px 8px 0;
+        border-radius: 2px;
+        // Medium devices (landscape tablets, 768px and up)
+        @media only screen and (min-width: 768px) {
+            height: 62px;
+        }
+        // Large devices (laptops/desktops, 992px and up)
+        @media only screen and (min-width: 992px) {
+            border-radius: 0;
+            height: 70px;
+            padding: 8px 8px 0;
+        }
+        // labels - text above
+        label {
+            color: grey;
+            font-size: 12px;
+            margin: 0;
+            // Medium devices (landscape tablets, 768px and up)
+            @media only screen and (min-width: 768px) {
+                font-size: 14px;
+            }
+        }
+        // input content - text below
+        input[type="text"] {
+            border: none;
+            padding: 0;
+            margin: -5px 0 0;
+            font: {
+                size: 16px;
+                weight: 500;
+            }
+        }
+        #origen {
+            &::placeholder {
+                font: {
+                    weight: 500;
+                    size: 18px;
+                }
+                color: $text_color;
+            }
+        }
+        #destination {
+            &::placeholder {
+                color: lighten($text_color, 50%);
+            }
+        }
+    }
+    // dates within another row
+    div.dates_row {
+        div.dates_col {
+            width: 100%;
+            padding: 0;
+            position: relative;
+            //z-index: 1;
+            .icon_calender {
+                position: absolute;
+                right: 15px;
+                top: 22px;
+                z-index: 1;
+            }
+            #dia_ida,
+            #dia_vuelta,
+            #checkIn,
+            #checkOut {
+                display: block;
+                width: 96%;
+                border: none;
+                &::placeholder {
+                    font: {
+                        weight: 500;
+                        size: 17px;
+                    }
+                    color: $text_color;
+                }
+            }
+        }
+    }
+    // passenger select
+    #passengers,
+    #adults_num {
+        width: 100%;
+        grid-area: "passengers";
+        position: relative;
+        z-index: 1;
+        select {
+            display: block;
+            margin: 3px 0 0 -3px;
+            width: 100%;
+            border: none;
+            background-color: rgba(255, 255, 255, 0);
+            color: $text_color;
+            font: {
+                size: 17px;
+                weight: 500;
+                family: $text_font;
+            }
+            -webkit-appearance: none;
+            outline: none;
+            option {
+                margin: 5px 0;
+            }
+        }
+        .icono {
+            width: 28px;
+            height: 28px;
+            position: absolute;
+            bottom: 5px;
+            right: 20px;
+            z-index: -1;
+            // Large devices (laptops/desktops, 992px and up)
+            @media only screen and (min-width: 992px) {
+                bottom: 10px;
+            }
+        }
+    }
+    // button
+    button {
+        width: 100%;
+        height: 50px;
+        box-sizing: border-box;
+        background-color: $uoc_clar;
+        border: none;
+        border-radius: 2px;
+        font-weight: 700;
+        margin: 15px 0 0;
+        padding: 0;
+        // Medium devices (landscape tablets, 768px and up)
+        @media only screen and (min-width: 768px) {
+            margin: -30px 0 0;
+        }
+        // Large devices (laptops/desktops, 992px and up)
+        @media only screen and (min-width: 992px) {
+            height: 70px;
+            padding: 0 30px;
+            margin: 0 0 0 3px;
+        }
+    }
+    // search hotel button - extra styles
+    #searchHotel {
+        // Large devices (laptops/desktops, 992px and up)
+        @media only screen and (min-width: 992px) {
+            margin-top: 30px;
+            height: 72px;
+        }
+    }
+}
+
+// general format for class .error-form, that's why I put it here without nesting it
+// since I would have to add it to every nested parent element
+.error-form {
+    display: block;
+    margin: 0 0 0 -4px;
+    color: red;
+    // Medium devices (landscape tablets, 768px and up)
+    @media only screen and (min-width: 768px) {
+        margin-top: 3px;
+    }
+    // Large devices (laptops/desktops, 992px and up)
+    @media only screen and (min-width: 992px) {
+        margin-top: 7px;
+    }
+}
+
+#error_message_psg,
+#error_message_persons {
+    margin-top: 6px;
+    // Medium devices (landscape tablets, 768px and up)
+    @media only screen and (min-width: 768px) {
+        margin-top: 8px;
+    }
+    // Large devices (laptops/desktops, 992px and up)
+    @media only screen and (min-width: 992px) {
+        margin-top: 12px;
+    }
+}

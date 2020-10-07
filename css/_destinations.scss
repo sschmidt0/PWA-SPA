@@ -1,0 +1,85 @@
+// ************ DESTINATION SECTION ************
+.destinations {
+    .innerbox {
+        // inner container till 960px expansion
+        h3 {
+            @extend %title;
+        }
+        p {
+            @extend %padding_p;
+        }
+    }
+    // // content box containing destination section's inner elements
+    .destination_content {
+        // link boxes
+        a {
+            padding-bottom: 10px;
+            @extend %img_hover;
+            // Small devices (landscape phones, 576px and up)
+            @media (min-width: 576px) {
+                padding: 0 5px 10px 5px;
+            }
+            // media query per treure l'espai a partir de 960px
+            @media only screen and (min-width: 960px) {
+                &:first-child,
+                &:nth-child(4) {
+                    padding-left: 0;
+                }
+                &:last-child,
+                &:nth-child(3) {
+                    padding-right: 0;
+                }
+            }
+            // each foto - destination element
+            .destination_item {
+                margin: 0;
+                padding: 0;
+                position: relative;
+                color: #fff;
+                // title
+                h5 {
+                    position: absolute;
+                    bottom: 55px;
+                    left: 20px;
+                    text-shadow: 1px 1px 1px #000;
+                    font-size: 35px;
+                    // Small devices (landscape phones, 576px and up)
+                    @media (min-width: 576px) {
+                        font-size: 1.25rem;
+                        bottom: 50px;
+                    }
+                }
+                // texts
+                div {
+                    position: absolute;
+                    bottom: 30px;
+                    left: 20px;
+                    font-size: 35px;
+                    // Small devices (landscape phones, 576px and up)
+                    @media (min-width: 576px) {
+                        font-size: 1.25rem;
+                    }
+                    span.small {
+                        font-size: 17px;
+                        // Small devices (landscape phones, 576px and up)
+                        @media (min-width: 576px) {
+                            font-size: 14px;
+                        }
+                    }
+                }
+                // horitzontal line
+                hr {
+                    width: 50px;
+                    border-top: 2px solid $uoc_clar;
+                    position: absolute;
+                    bottom: 8px;
+                    left: 20px;
+                }
+                // foto
+                img {
+                    @extend %img_size;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,86 @@
+// ************ HEADER ************
+header {
+    max-width: 100vw;
+    padding: 2px 0;
+    justify-content: center;
+    // tauletes
+    @media (min-width: 768px) {
+        padding: 10px 0;
+    }
+    .navbar {
+        // INNER NAVIGATION CONTAINER
+        z-index: 9999;
+        padding: 5px;
+        @extend %inbox;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        // media query per treure l'espai a partir de 960px
+        @media only screen and (min-width: 960px) {
+            padding: 15px 0;
+        }
+        // BRAND ITEM
+        .navbar-brand {
+            display: block;
+            width: 120px;
+            height: auto;
+            // tauletes
+            @media (min-width: 768px) {
+                width: 180px;
+                height: 54px;
+            }
+            img {
+                @extend %img_size;
+                @extend %img_hover;
+            }
+        }
+        .navbar-toggler-icon {
+            width: 18px;
+            height: 18px;
+        }
+        // BUTTONS
+        .nav_btn {
+            ul {
+                li {
+                    list-style: none;
+                    a {
+                        font-size: 11px;
+                        // tauletes
+                        @media (min-width: 768px) {
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+            .btn {
+                -webkit-appearance: none;
+                border-radius: 2px;
+                border: 1px solid $uoc_dark;
+            }
+            #btn1 {
+                color: $uoc_dark;
+                background-color: #fff;
+                padding: 10px 20px;
+                // Medium devices (landscape tablets, 768px and up)
+                @media only screen and (min-width: 768px) {
+                    margin-right: 10px;
+                }
+            }
+            #btn2 {
+                color: #fff;
+                background-color: $uoc_dark;
+                padding: 10px 22px;
+            }
+            #btn1,
+            #btn2 {
+                &:hover {
+                    background-color: $uoc_clar;
+                    border: 1px solid $uoc_clar;
+                    color: $uoc_dark;
+                    -webkit-transition: .3s ease-in-out;
+                    transition: .3s ease-in-out;
+                }
+            }
+        }
+    }
+}

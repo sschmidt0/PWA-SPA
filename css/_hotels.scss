@@ -1,0 +1,84 @@
+// Hotel page
+
+.hotels-page {
+
+		.innerbox {
+				// inner container till 960px expansion
+				h3 {
+						@extend %title;
+						margin-top: -80px;
+						padding-top: 40px;
+						width: 100%;
+						text-align: center;
+						border-top: 1px solid $uoc_clar;
+						// Medium devices (landscape tablets, 768px and up)
+						@media only screen and (min-width: 768px) {
+								margin-top: -60px;
+						}
+
+				}
+		}
+}
+
+.flex-content {
+		margin-top: 40px;
+		display: flex;
+		justify-content: space-evenly;
+		flex-wrap: wrap;
+		.hotel-card {
+				display: flex;
+				width: 100%;
+				margin: 0 20px 30px 20px;
+				font-size: 15px;
+				background-color: rgb(245, 245, 245);
+				border-radius: 40px;
+				overflow: hidden;
+				@extend %img_hover;
+				// Small devices (landscape phones, 576px and up)
+				@media (min-width: 576px) {
+						width: 43%;
+				}
+				// Medium devices (landscape tablets, 768px and up)
+				@media only screen and (min-width: 768px) {
+						width: 222px;
+						margin: 0 5px 30px 5px;
+				}
+				.card-link {
+						margin: 0;
+						padding: 0;
+						list-style: none;
+						color: $text_color;
+				}
+				img {
+						width: 100%;
+						height: auto;
+				}
+				.card-body {
+						display: flex;
+						flex-direction: column;
+						h4 {
+								height: 60px;
+								color: $uoc_dark;
+								font-size: 20px;
+						}
+						.starRate {
+								margin-bottom: 10px;
+								color: $uoc_clar;
+						}
+						.price {
+								color: $uoc_dark;
+								font-size: 30px;
+								font-weight: 700;
+						}
+						.address {
+								p {
+										margin-bottom: 2px;
+								}
+						}
+						.neighbourhood {
+								margin-top: 5px;
+								font-style: italic;
+						}
+				}
+		}
+}

@@ -1,0 +1,1375 @@
+.hotel-neighbourhood .neighbourhood-title, .item-title, .hotel-box .hotel-name, .destinations .innerbox h3, .useful_links .innerbox h3, .inspiration .innerbox h3, .hotels-page .innerbox h3 {
+  color: #000078;
+  font-weight: 700;
+}
+
+footer .innerbox, header .navbar, section .innerbox {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.destinations .innerbox p, .useful_links .innerbox p, .inspiration .innerbox p {
+  margin: 10px 0 20px;
+  padding: 0 20px;
+  color: #333;
+  font-size: 16px;
+}
+
+.destinations .destination_content a .destination_item img, .inspiration .inspiration_fotos a .inspiration_item img, header .navbar .navbar-brand img {
+  width: 100%;
+  height: auto;
+}
+
+.overlay .overlay-inner form .buttonGroup #iniciSessio:hover,
+.overlay .overlay-inner form .buttonGroup #tancar:hover, .hotel-images-grid .image-grid-item:hover, .destinations .destination_content a, .useful_links .innerbox a, .inspiration .inspiration_fotos a, .flex-content .hotel-card, header .navbar .navbar-brand img {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+.overlay .overlay-inner form .buttonGroup #iniciSessio:hover,
+.overlay .overlay-inner form .buttonGroup #tancar:hover, .hotel-images-grid .image-grid-item:hover, .destinations .destination_content a:hover, .useful_links .innerbox a:hover, .inspiration .inspiration_fotos a:hover, .flex-content .hotel-card:hover, header .navbar .navbar-brand img:hover {
+  -webkit-transform: scale(1.01);
+  transform: scale(1.01);
+}
+
+.useful_links .innerbox .useful_links_content .link-item, .content_type_of_travel div.one_column div .type_travel1,
+.content_type_of_travel div.one_column div .type_travel2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/***********************************
+    **  MOBILE LAYOUT **
+***********************************/
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  background-color: #fff;
+  z-index: 999;
+}
+
+main {
+  margin-top: 120px;
+  flex: 1 1 auto;
+}
+
+/***********************************
+    **  STYLE EACH BLOCK **
+***********************************/
+section {
+  width: 100%;
+}
+section .innerbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 0;
+}
+@media (min-width: 768px) {
+  section .innerbox {
+    justify-content: space-evenly;
+    padding: 50px 15px;
+  }
+}
+
+/***********************************
+    **  CARREGANT GIF **
+***********************************/
+.loader {
+  position: fixed;
+  top: 90px;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 50px;
+  background-color: #fff;
+  text-align: center;
+  z-index: 999;
+}
+
+header {
+  max-width: 100vw;
+  padding: 2px 0;
+  justify-content: center;
+}
+@media (min-width: 768px) {
+  header {
+    padding: 10px 0;
+  }
+}
+header .navbar {
+  z-index: 9999;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media only screen and (min-width: 960px) {
+  header .navbar {
+    padding: 15px 0;
+  }
+}
+header .navbar .navbar-brand {
+  display: block;
+  width: 120px;
+  height: auto;
+}
+@media (min-width: 768px) {
+  header .navbar .navbar-brand {
+    width: 180px;
+    height: 54px;
+  }
+}
+header .navbar .navbar-toggler-icon {
+  width: 18px;
+  height: 18px;
+}
+header .navbar .nav_btn ul li {
+  list-style: none;
+}
+header .navbar .nav_btn ul li a {
+  font-size: 11px;
+}
+@media (min-width: 768px) {
+  header .navbar .nav_btn ul li a {
+    font-size: 15px;
+  }
+}
+header .navbar .nav_btn .btn {
+  -webkit-appearance: none;
+  border-radius: 2px;
+  border: 1px solid #000078;
+}
+header .navbar .nav_btn #btn1 {
+  color: #000078;
+  background-color: #fff;
+  padding: 10px 20px;
+}
+@media only screen and (min-width: 768px) {
+  header .navbar .nav_btn #btn1 {
+    margin-right: 10px;
+  }
+}
+header .navbar .nav_btn #btn2 {
+  color: #fff;
+  background-color: #000078;
+  padding: 10px 22px;
+}
+header .navbar .nav_btn #btn1:hover,
+header .navbar .nav_btn #btn2:hover {
+  background-color: #73EDFF;
+  border: 1px solid #73EDFF;
+  color: #000078;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.searchbox {
+  position: relative;
+}
+.searchbox .innerbox {
+  padding: 0;
+}
+.searchbox .innerbox .background-image {
+  background: url("../imatges/destacada.png");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 600px;
+  z-index: -1;
+}
+@media only screen and (min-width: 768px) {
+  .searchbox .innerbox .background-image {
+    height: 550px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .searchbox .innerbox .background-image {
+    height: 400px;
+  }
+}
+.searchbox .innerbox .searchbox-content-area {
+  width: 100%;
+}
+.searchbox .innerbox .searchbox-content-area h1 {
+  text-align: center;
+  margin: 40px 0;
+  color: #000078;
+  font-size: 20px;
+}
+@media only screen and (min-width: 600px) {
+  .searchbox .innerbox .searchbox-content-area h1 {
+    font-size: 26px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .searchbox .innerbox .searchbox-content-area h1 {
+    font-size: 34px;
+  }
+}
+
+/***********************************
+            **  CONTAINER **
+***********************************/
+.container_searchform {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 10px;
+  position: relative;
+}
+@media only screen and (min-width: 768px) {
+  .container_searchform {
+    margin: 0;
+    padding: 5px 20px 0;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .container_searchform {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+/***********************************
+            **  NAV TABS **
+***********************************/
+.nav-tabs {
+  border-color: #73EDFF;
+  margin-bottom: 14px;
+}
+.nav-tabs .nav-link {
+  padding: 10px 18px;
+  background-color: #fff;
+  color: #000;
+}
+.nav-tabs .nav-link:hover, .nav-tabs .nav-link:active {
+  border-color: #73EDFF;
+  background-color: #73EDFF;
+}
+.nav-tabs .nav-link.active {
+  background-color: #000078;
+  color: #fff;
+  font-weight: 500;
+  border-color: #000078;
+}
+
+.tab-content {
+  background-color: #000078;
+}
+
+/***********************************
+        **  FLIGHT CONTENT **
+***********************************/
+.content_type_of_travel {
+  margin-top: -14px;
+}
+.content_type_of_travel div.one_column {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "travel1 travel2";
+}
+.content_type_of_travel div.one_column div {
+  height: 100px;
+}
+.content_type_of_travel div.one_column div input[type=radio] {
+  display: none;
+}
+.content_type_of_travel div.one_column div input[type=radio]:checked + label {
+  background-color: #73EDFF;
+  font-weight: 500;
+}
+.content_type_of_travel div.one_column div .type_travel1,
+.content_type_of_travel div.one_column div .type_travel2 {
+  display: block;
+  width: 47%;
+  background-size: 40px 100px;
+  position: absolute;
+  top: 0;
+  padding: 10px 5px;
+  margin-top: 15px;
+  background-color: #fff;
+  text-align: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #333;
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+}
+@media only screen and (min-width: 600px) {
+  .content_type_of_travel div.one_column div .type_travel1,
+.content_type_of_travel div.one_column div .type_travel2 {
+    width: 48%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .content_type_of_travel div.one_column div .type_travel1,
+.content_type_of_travel div.one_column div .type_travel2 {
+    width: 100px;
+    margin-top: 30px;
+    padding: 12px 6px;
+  }
+}
+.content_type_of_travel div.one_column div .type_travel1 {
+  border-radius: 2px 0 0 2px;
+  grid-area: "travel1";
+}
+.content_type_of_travel div.one_column div .type_travel2 {
+  border-radius: 0 2px 2px 0;
+  grid-area: "travel2";
+}
+@media only screen and (min-width: 768px) {
+  .content_type_of_travel div.one_column div .type_travel2 {
+    left: 115px;
+  }
+}
+
+.searchbox {
+  margin-top: -30px;
+  padding: 0 16px 30px;
+  /***********************************
+      **  SPECIFIC HOTEL CONTENT **
+  ***********************************/
+}
+@media only screen and (min-width: 768px) {
+  .searchbox {
+    margin-top: -14px;
+  }
+}
+.searchbox .in_row {
+  padding: 0;
+  margin: 0;
+}
+.searchbox .in_row:first-child {
+  margin-bottom: 15px;
+}
+@media only screen and (min-width: 768px) {
+  .searchbox .in_row:first-child {
+    width: 80%;
+    margin-bottom: -30px;
+  }
+  .searchbox .in_row:last-child {
+    width: 20%;
+  }
+}
+.searchbox .inrow_grid {
+  width: 100%;
+  margin: 0;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
+  grid-gap: 25px;
+  grid-template-areas: "origin" "destination" "date" "passengers";
+}
+@media only screen and (min-width: 768px) {
+  .searchbox .inrow_grid {
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 24px;
+    grid-column-gap: 15px;
+    grid-template-areas: "origen destination" "date date" "passengers passengers";
+  }
+}
+@media only screen and (min-width: 992px) {
+  .searchbox .inrow_grid {
+    grid-template-rows: 1fr;
+    grid-template-columns: 19% 19% 40% 19%;
+    grid-gap: 5px;
+    grid-template-areas: "origen destination date passengers";
+  }
+}
+.searchbox .inrow_grid:first-child {
+  grid-area: "origin";
+}
+.searchbox .inrow_grid:nth-child(2) {
+  grid-area: "destination";
+}
+.searchbox .inrow_grid::nth-child(3) {
+  grid-area: "date";
+}
+.searchbox .inrow_grid:last-child {
+  grid-area: "passengers";
+}
+.searchbox .hotel-grid {
+  width: 100%;
+  margin-top: 20px;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
+  grid-gap: 25px;
+  grid-template-areas: "destination-hotel" "date-hotel" "adults";
+}
+@media only screen and (min-width: 768px) {
+  .searchbox .hotel-grid {
+    padding-top: 10px;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 24px;
+    grid-column-gap: 15px;
+    grid-template-areas: "destination-hotel" "date-hotel date-hotel" "adults adults";
+  }
+}
+@media only screen and (min-width: 992px) {
+  .searchbox .hotel-grid {
+    padding-bottom: 30px;
+    grid-template-rows: 1fr;
+    grid-template-columns: 19% 40% 19%;
+    grid-gap: 5px;
+    grid-template-areas: "destination-hotel date-hotel adults";
+  }
+}
+.searchbox .hotel-grid:first-child {
+  grid-area: "destination-hotel";
+}
+.searchbox .hotel-grid::nth-child(2) {
+  grid-area: "date-hotel";
+}
+.searchbox .hotel-grid:last-child {
+  grid-area: "adults";
+}
+.searchbox div.content {
+  height: 58px;
+  background-color: #fff;
+  margin: 0;
+  padding: 4px 8px 0;
+  border-radius: 2px;
+}
+@media only screen and (min-width: 768px) {
+  .searchbox div.content {
+    height: 62px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .searchbox div.content {
+    border-radius: 0;
+    height: 70px;
+    padding: 8px 8px 0;
+  }
+}
+.searchbox div.content label {
+  color: grey;
+  font-size: 12px;
+  margin: 0;
+}
+@media only screen and (min-width: 768px) {
+  .searchbox div.content label {
+    font-size: 14px;
+  }
+}
+.searchbox div.content input[type=text] {
+  border: none;
+  padding: 0;
+  margin: -5px 0 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+.searchbox div.content #origen::placeholder {
+  font-weight: 500;
+  font-size: 18px;
+  color: #333;
+}
+.searchbox div.content #destination::placeholder {
+  color: #b3b3b3;
+}
+.searchbox div.dates_row div.dates_col {
+  width: 100%;
+  padding: 0;
+  position: relative;
+}
+.searchbox div.dates_row div.dates_col .icon_calender {
+  position: absolute;
+  right: 15px;
+  top: 22px;
+  z-index: 1;
+}
+.searchbox div.dates_row div.dates_col #dia_ida,
+.searchbox div.dates_row div.dates_col #dia_vuelta,
+.searchbox div.dates_row div.dates_col #checkIn,
+.searchbox div.dates_row div.dates_col #checkOut {
+  display: block;
+  width: 96%;
+  border: none;
+}
+.searchbox div.dates_row div.dates_col #dia_ida::placeholder,
+.searchbox div.dates_row div.dates_col #dia_vuelta::placeholder,
+.searchbox div.dates_row div.dates_col #checkIn::placeholder,
+.searchbox div.dates_row div.dates_col #checkOut::placeholder {
+  font-weight: 500;
+  font-size: 17px;
+  color: #333;
+}
+.searchbox #passengers,
+.searchbox #adults_num {
+  width: 100%;
+  grid-area: "passengers";
+  position: relative;
+  z-index: 1;
+}
+.searchbox #passengers select,
+.searchbox #adults_num select {
+  display: block;
+  margin: 3px 0 0 -3px;
+  width: 100%;
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+  color: #333;
+  font-size: 17px;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+  -webkit-appearance: none;
+  outline: none;
+}
+.searchbox #passengers select option,
+.searchbox #adults_num select option {
+  margin: 5px 0;
+}
+.searchbox #passengers .icono,
+.searchbox #adults_num .icono {
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  bottom: 5px;
+  right: 20px;
+  z-index: -1;
+}
+@media only screen and (min-width: 992px) {
+  .searchbox #passengers .icono,
+.searchbox #adults_num .icono {
+    bottom: 10px;
+  }
+}
+.searchbox button {
+  width: 100%;
+  height: 50px;
+  box-sizing: border-box;
+  background-color: #73EDFF;
+  border: none;
+  border-radius: 2px;
+  font-weight: 700;
+  margin: 15px 0 0;
+  padding: 0;
+}
+@media only screen and (min-width: 768px) {
+  .searchbox button {
+    margin: -30px 0 0;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .searchbox button {
+    height: 70px;
+    padding: 0 30px;
+    margin: 0 0 0 3px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .searchbox #searchHotel {
+    margin-top: 30px;
+    height: 72px;
+  }
+}
+
+.error-form {
+  display: block;
+  margin: 0 0 0 -4px;
+  color: red;
+}
+@media only screen and (min-width: 768px) {
+  .error-form {
+    margin-top: 3px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .error-form {
+    margin-top: 7px;
+  }
+}
+
+#error_message_psg,
+#error_message_persons {
+  margin-top: 6px;
+}
+@media only screen and (min-width: 768px) {
+  #error_message_psg,
+#error_message_persons {
+    margin-top: 8px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #error_message_psg,
+#error_message_persons {
+    margin-top: 12px;
+  }
+}
+
+.hotels-page .innerbox h3 {
+  margin-top: -80px;
+  padding-top: 40px;
+  width: 100%;
+  text-align: center;
+  border-top: 1px solid #73EDFF;
+}
+@media only screen and (min-width: 768px) {
+  .hotels-page .innerbox h3 {
+    margin-top: -60px;
+  }
+}
+
+.flex-content {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.flex-content .hotel-card {
+  display: flex;
+  width: 100%;
+  margin: 0 20px 30px 20px;
+  font-size: 15px;
+  background-color: whitesmoke;
+  border-radius: 40px;
+  overflow: hidden;
+}
+@media (min-width: 576px) {
+  .flex-content .hotel-card {
+    width: 43%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .flex-content .hotel-card {
+    width: 222px;
+    margin: 0 5px 30px 5px;
+  }
+}
+.flex-content .hotel-card .card-link {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: #333;
+}
+.flex-content .hotel-card img {
+  width: 100%;
+  height: auto;
+}
+.flex-content .hotel-card .card-body {
+  display: flex;
+  flex-direction: column;
+}
+.flex-content .hotel-card .card-body h4 {
+  height: 60px;
+  color: #000078;
+  font-size: 20px;
+}
+.flex-content .hotel-card .card-body .starRate {
+  margin-bottom: 10px;
+  color: #73EDFF;
+}
+.flex-content .hotel-card .card-body .price {
+  color: #000078;
+  font-size: 30px;
+  font-weight: 700;
+}
+.flex-content .hotel-card .card-body .address p {
+  margin-bottom: 2px;
+}
+.flex-content .hotel-card .card-body .neighbourhood {
+  margin-top: 5px;
+  font-style: italic;
+}
+
+.inspiration .innerbox h3 {
+  margin-top: 20px;
+}
+@media only screen and (min-width: 768px) {
+  .inspiration .innerbox h3 {
+    margin-top: 50px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .inspiration .innerbox h3 {
+    margin-top: 60px;
+  }
+}
+@media only screen and (min-width: 960px) {
+  .inspiration .inspiration_fotos:first-child {
+    padding-left: 0;
+  }
+  .inspiration .inspiration_fotos:last-child {
+    padding-right: 0;
+  }
+}
+.inspiration .inspiration_fotos a {
+  padding-bottom: 10px;
+}
+@media (min-width: 576px) {
+  .inspiration .inspiration_fotos a {
+    padding: 0 5px 10px 5px;
+  }
+}
+.inspiration .inspiration_fotos a .inspiration_item {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  color: #fff;
+}
+.inspiration .inspiration_fotos a .inspiration_item h5 {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  font-weight: 400;
+  font-size: 30px;
+}
+@media (min-width: 576px) {
+  .inspiration .inspiration_fotos a .inspiration_item h5 {
+    font-size: 20px;
+    top: 20px;
+  }
+}
+.useful_links {
+  background-color: #f6f5f9;
+}
+.useful_links .innerbox a {
+  text-decoration: none;
+}
+.useful_links .innerbox .useful_links_content {
+  width: 100%;
+  margin: 0;
+  padding: 0 10px;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-row-gap: 20px;
+  grid-template-columns: auto;
+  grid-template-areas: "timetable" "luggage" "faq" "checkin" "assistance";
+}
+@media only screen and (min-width: 600px) {
+  .useful_links .innerbox .useful_links_content {
+    padding: 0 20px;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "timetable luggage faq" "checkin assistance .";
+    grid-column-gap: 20px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .useful_links .innerbox .useful_links_content {
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "timetable luggage faq checkin assistance";
+  }
+}
+@media only screen and (min-width: 960px) {
+  .useful_links .innerbox .useful_links_content {
+    padding: 0;
+  }
+}
+.useful_links .innerbox .useful_links_content .link-item {
+  background-color: #fff;
+  color: #000078;
+  flex-direction: column;
+  -webkit-appearance: none;
+  -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.4);
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.4);
+}
+.useful_links .innerbox .useful_links_content .link-item:first-child {
+  grid-area: "timetable";
+}
+.useful_links .innerbox .useful_links_content .link-item:nth-child(2) {
+  grid-area: "luggage";
+}
+.useful_links .innerbox .useful_links_content .link-item:nth-child(3) {
+  grid-area: "faq";
+}
+.useful_links .innerbox .useful_links_content .link-item:nth-child(4) {
+  grid-area: "checkin";
+}
+.useful_links .innerbox .useful_links_content .link-item:last-child {
+  grid-area: "assistance";
+}
+.useful_links .innerbox .useful_links_content .link-item .icono {
+  width: 20px;
+  height: 20px;
+  margin: 10px 0;
+}
+.useful_links .innerbox .useful_links_content .link-item span {
+  text-align: center;
+  width: 125px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.useful_links .innerbox .useful_links_content .link-item hr {
+  margin-top: 10px;
+  width: 50px;
+  border-top: 2px solid #73EDFF;
+}
+
+.destinations .destination_content a {
+  padding-bottom: 10px;
+}
+@media (min-width: 576px) {
+  .destinations .destination_content a {
+    padding: 0 5px 10px 5px;
+  }
+}
+@media only screen and (min-width: 960px) {
+  .destinations .destination_content a:first-child, .destinations .destination_content a:nth-child(4) {
+    padding-left: 0;
+  }
+  .destinations .destination_content a:last-child, .destinations .destination_content a:nth-child(3) {
+    padding-right: 0;
+  }
+}
+.destinations .destination_content a .destination_item {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  color: #fff;
+}
+.destinations .destination_content a .destination_item h5 {
+  position: absolute;
+  bottom: 55px;
+  left: 20px;
+  text-shadow: 1px 1px 1px #000;
+  font-size: 35px;
+}
+@media (min-width: 576px) {
+  .destinations .destination_content a .destination_item h5 {
+    font-size: 1.25rem;
+    bottom: 50px;
+  }
+}
+.destinations .destination_content a .destination_item div {
+  position: absolute;
+  bottom: 30px;
+  left: 20px;
+  font-size: 35px;
+}
+@media (min-width: 576px) {
+  .destinations .destination_content a .destination_item div {
+    font-size: 1.25rem;
+  }
+}
+.destinations .destination_content a .destination_item div span.small {
+  font-size: 17px;
+}
+@media (min-width: 576px) {
+  .destinations .destination_content a .destination_item div span.small {
+    font-size: 14px;
+  }
+}
+.destinations .destination_content a .destination_item hr {
+  width: 50px;
+  border-top: 2px solid #73EDFF;
+  position: absolute;
+  bottom: 8px;
+  left: 20px;
+}
+.hotels-page .innerbox h3 {
+  margin-top: -80px;
+  padding-top: 40px;
+  width: 100%;
+  text-align: center;
+  border-top: 1px solid #73EDFF;
+}
+@media only screen and (min-width: 768px) {
+  .hotels-page .innerbox h3 {
+    margin-top: -60px;
+  }
+}
+
+.flex-content {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.flex-content .hotel-card {
+  display: flex;
+  width: 100%;
+  margin: 0 20px 30px 20px;
+  font-size: 15px;
+  background-color: whitesmoke;
+  border-radius: 40px;
+  overflow: hidden;
+}
+@media (min-width: 576px) {
+  .flex-content .hotel-card {
+    width: 43%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .flex-content .hotel-card {
+    width: 222px;
+    margin: 0 5px 30px 5px;
+  }
+}
+.flex-content .hotel-card .card-link {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: #333;
+}
+.flex-content .hotel-card img {
+  width: 100%;
+  height: auto;
+}
+.flex-content .hotel-card .card-body {
+  display: flex;
+  flex-direction: column;
+}
+.flex-content .hotel-card .card-body h4 {
+  height: 60px;
+  color: #000078;
+  font-size: 20px;
+}
+.flex-content .hotel-card .card-body .starRate {
+  margin-bottom: 10px;
+  color: #73EDFF;
+}
+.flex-content .hotel-card .card-body .price {
+  color: #000078;
+  font-size: 30px;
+  font-weight: 700;
+}
+.flex-content .hotel-card .card-body .address p {
+  margin-bottom: 2px;
+}
+.flex-content .hotel-card .card-body .neighbourhood {
+  margin-top: 5px;
+  font-style: italic;
+}
+
+.hotel-page {
+  max-width: 1100px;
+  margin: 30px auto 0;
+}
+
+/******************************************
+**** BUTTON .BTN-BACK
+*******************************************/
+.btn-back {
+  margin-left: 10px;
+  margin-bottom: 40px;
+  font-size: 12px;
+  background-color: #73EDFF;
+  border-color: #73EDFF;
+}
+.btn-back:hover {
+  background-color: #000078;
+  color: #fff;
+  border-color: #000078;
+}
+
+/******************************************
+**** HOTEL BOX AND CHILD ELEMENTS NAME, STAR RATING, ADDRESS, REWARD
+*******************************************/
+.hotel-box {
+  padding: 0 5px;
+}
+@media only screen and (min-width: 768px) {
+  .hotel-box {
+    padding: 0;
+  }
+}
+.hotel-box .hotel-name {
+  color: #000078;
+}
+.hotel-box .star-rate {
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: #73EDFF;
+}
+.hotel-box .hotel-address {
+  margin-top: -15px;
+}
+.hotel-box .hotel-reward {
+  margin-top: 15px;
+  margin-bottom: 40px;
+  padding: 7px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 18px;
+}
+.hotel-box .hotel-reward .reward-item {
+  width: 16px;
+  height: 16px;
+  margin-left: 10px;
+  margin-top: -4px;
+}
+
+@supports (display: grid) {
+  .hotel-box {
+    padding: 0 10px;
+    display: grid;
+    grid-template-columns: 2fr 8fr 2fr;
+    grid-template-rows: auto;
+    grid-gap: 10px 20px;
+  }
+  .hotel-box > * {
+    grid-column: 1/-1;
+  }
+
+  @media only screen and (min-width: 768px) {
+    .hotel-box > * {
+      grid-column: 2/-2;
+      grid-gap: 10px 40px;
+    }
+    .hotel-box .container-review-hotel {
+      grid-column: 1/2;
+      grid-row: 1/4;
+    }
+    .hotel-box .container-review-items {
+      grid-column: 3/-1;
+      grid-row: 1/7;
+      align-self: start;
+      flex-direction: row-reverse;
+    }
+  }
+}
+/******************************************
+**** CHILD ELEMENT REVIEW
+*******************************************/
+.guest-review {
+  display: flex;
+  flex-direction: column;
+  width: 130px;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  padding: 12px;
+  border-radius: 2px;
+}
+.guest-review .average {
+  align-self: flex-end;
+  width: 36px;
+  margin-top: -23px;
+  margin-right: -23px;
+  padding: 7px;
+  text-align: center;
+  font-weight: 900;
+  border-radius: 5px 5px 5px 0;
+}
+.guest-review .badge-text {
+  margin-top: -15px;
+  font-size: 13px;
+  font-weight: 700;
+}
+.guest-review .detail {
+  margin-top: -15px;
+  font-size: 10px;
+}
+.guest-review .total-votes {
+  margin: 0;
+  padding: 0;
+}
+
+.review-hotel {
+  height: 80px;
+  background-color: #000078;
+  color: #fff;
+}
+.review-hotel .average {
+  background-color: #73EDFF;
+}
+
+.review-items {
+  background-color: #73EDFF;
+  color: #333;
+}
+.review-items .average {
+  background-color: #000078;
+  color: #fff;
+}
+
+.container-review-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/******************************************
+**** FACILITY LISTS
+*******************************************/
+.item-title {
+  font-size: 18px;
+}
+
+.facilities {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 3px;
+  margin-bottom: 40px;
+}
+
+.facility-list {
+  padding: 10px 10px 10px 0;
+  width: 48%;
+}
+@media only screen and (min-width: 600px) {
+  .facility-list {
+    width: 50%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .facility-list {
+    width: 182px;
+  }
+}
+.facility-list h4 {
+  font-size: 16px;
+  color: #73EDFF;
+}
+.facility-list ul {
+  list-style: none;
+}
+
+/******************************************
+**** NEIGHBOURHOOD DESCRIPTION
+*******************************************/
+.hotel-neighbourhood {
+  margin-top: 10px;
+}
+.hotel-neighbourhood .neighbourhood-title {
+  font-size: 18px;
+}
+.hotel-neighbourhood .neighbourhood-description {
+  margin-top: 20px;
+  margin-bottom: 60px;
+}
+
+/******************************************
+**** FOTO GRID
+*******************************************/
+.carousel-container {
+  margin-bottom: -10px;
+  overflow: hidden;
+}
+.carousel-container .arrow-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carousel-container .arrow-items:hover {
+  cursor: pointer;
+}
+.carousel-container .carousel-slide img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+@supports (display: grid) {
+  .carousel-container {
+    display: grid;
+    grid-template-columns: 1fr 8fr 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 0;
+  }
+  .carousel-container .arrow-items {
+    z-index: 99;
+    color: #fff;
+  }
+  .carousel-container .arrow-items:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+  .carousel-container .grid-left {
+    grid-column: 1/span 1;
+    grid-row: 1;
+  }
+  .carousel-container .grid-right {
+    grid-column: span 1/-1;
+    grid-row: 1;
+  }
+  .carousel-container .carousel-slide {
+    grid-column: 1/-1;
+    grid-row: 1;
+  }
+}
+.hotel-images-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+.hotel-images-grid .image-grid-item {
+  width: 40px;
+  height: 40px;
+  margin: 0;
+}
+.hotel-images-grid .image-grid-item:hover {
+  cursor: pointer;
+}
+.hotel-images-grid .image-grid-item .hotel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@supports (display: grid) {
+  .hotel-images-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+    grid-template-rows: auto;
+    grid-gap: 0;
+  }
+  .hotel-images-grid .image-grid-item {
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: 1;
+    overflow: hidden;
+  }
+  .hotel-images-grid .image-grid-item .hotel-image {
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+  }
+}
+footer {
+  background-color: #f6f5f9;
+}
+footer .innerbox {
+  padding: 3em 0 1em 0;
+  margin-bottom: -1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+@media (min-width: 768px) {
+  footer .innerbox {
+    padding-top: 2em;
+  }
+}
+@media only screen and (min-width: 960px) {
+  footer .linkbox:first-child, footer .linkbox:last-child {
+    padding: 0;
+  }
+}
+footer .linkbox h5 {
+  color: #000078;
+  font-size: 14px;
+}
+footer .linkbox ul {
+  list-style-type: none;
+}
+footer .linkbox ul li {
+  margin-top: -3px;
+}
+footer .linkbox ul li a {
+  font-size: 14px;
+  line-height: 200%;
+  color: gray;
+  text-decoration: none;
+}
+footer .linkbox ul li a:hover {
+  font-weight: 500;
+}
+footer .last_line {
+  width: 100%;
+  background-color: #000078;
+  color: #fff;
+  margin-top: 1.2em;
+  padding: 1.7em;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 100;
+}
+footer .last_line span {
+  display: inline-block;
+}
+footer .last_line span + span::before {
+  content: "|";
+  padding: 0 5px 0 0;
+}
+
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  align-items: center;
+  justify-items: center;
+  z-index: 9999;
+  overflow: hidden;
+}
+.overlay .overlay-inner {
+  margin: 0;
+  padding: 0;
+}
+.overlay .overlay-inner form {
+  display: none;
+  box-sizing: border-box;
+  min-width: 360px;
+  width: 50vw;
+  max-width: 600px;
+  margin: auto;
+  background-color: #73EDFF;
+  padding: 50px;
+}
+.overlay .overlay-inner form .form-group label {
+  font-size: 17px;
+  font-weight: 600;
+}
+.overlay .overlay-inner form .error-inici {
+  display: block;
+  color: red;
+  font-size: 17px;
+}
+.overlay .overlay-inner form .buttonGroup {
+  padding: 0;
+  margin: 50px 0 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.overlay .overlay-inner form .buttonGroup button {
+  width: 48%;
+}
+.overlay .overlay-inner form .buttonGroup #iniciSessio {
+  background-color: #000078;
+}
+.overlay .overlay-inner form .buttonGroup #tancar {
+  color: #000078;
+  border-color: #000078;
+}
+.overlay .overlay-inner form .buttonGroup #tancar:hover {
+  background-color: #000078;
+  opacity: 60%;
+  color: #fff;
+  transition: 0.2s ease-in-out;
+}
+.overlay .overlay-inner form .state_message {
+  display: block;
+  font-size: 15px;
+}
+.overlay .overlay-inner form #success_message {
+  color: green;
+}
+.overlay .overlay-inner form #error_message {
+  color: red;
+}
+
+/*# sourceMappingURL=main.css.map */

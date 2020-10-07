@@ -1,0 +1,343 @@
+<div class="page-content">
+
+
+    <!-- LOADER GIF -->
+	<div class="loader" id="loaderHotel">
+		<img src="../imatges/carregant.gif" alt="Cargando...">
+	</div>
+
+
+    <!-- SEARCH BOX -->
+    <section class="searchbox">
+        <div class="innerbox container">
+            <div class="background-image"></div>
+            <div class="searchbox-content-area">
+                <h1>¿Adónde quieres ir? Nosotros te llevamos</h1>
+                <div class="container_searchform">
+
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-toggle="tab" href="#flights">Vuelos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#hotels">Hoteles</a>
+                        </li>
+                    </ul>
+
+
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div class="tab-pane container active" id="flights">
+
+                            <!-- ************* FLIGHTS ************* -->
+
+                            <!-- FIRST ROW - RADIO BUTTONS FOR TYPE OF TRAVEL -->
+                            <div class="content_type_of_travel row">
+                                <div class="col-12 one_column">
+                                    <!-- ONE WAY -->
+                                    <div>
+                                        <input type="radio" name="radio" id="ida1" value="ida1">
+                                        <label for="ida1" class="type_travel1">
+                                            <span>solo ida</span>
+                                        </label>
+                                    </div>
+                                    <!-- RETURN -->
+                                    <div>
+                                        <input type="radio" name="radio" id="vuelta1" value="vuelta1" checked>
+                                        <label for="vuelta1" class="type_travel2">
+                                            <span>ida y vuelta</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- END FIRST ROW -->
+
+                            <!-- SECOND ROW - SEARCH BOX-->
+                            <div class="searchbox row">
+                                <div class="col-12 col-lg-10 in_row">
+                                    <!-- ORIGEN -->
+                                    <form class="inrow_grid" id="searchForm" method="GET">
+                                        <div class="content form-group" id="origen_cont">
+                                            <label for="origen">Origen</label>
+                                            <input type="text" class="form-control" id="origen" name="origen" placeholder="Barcelona" required>
+                                            <span class="error-form" id="error_message_origen"></span>
+                                        </div>
+                                        <!-- DESTINATION -->
+                                        <div class="content form-group" id="destination_cont">
+                                            <label for="destination">Destino</label>
+                                            <input type="text" class="form-control" id="destination" name="destination" placeholder="Ciudad, país, ..." required>
+                                            <span class="error-form" id="error_message_destination"></span>
+                                        </div>
+                                        <!-- ONE WAY / RETURN container -->
+                                        <div class="content row dates_row">
+                                            <!-- ONE WAY -->
+                                            <div class="col-6 form-group dates_col" id="dates_ida">
+                                                <label for="dia_ida">Ida</label>
+                                                <div class="input-grup date datepicker" id="datepicker_ida">
+                                                    <i data-feather="calendar" class="icon_calender" id="ida_cal"></i>
+                                                    <input type="text" class="form-control p-0" id="dia_ida" placeholder="Elige fecha" required>
+                                                    <span class="input-group-addon"></span>
+                                                    <span class="error-form" id="error_message_ida"></span>
+                                                </div>
+                                            </div>
+                                            <!-- RETURN -->
+                                            <div class="col-6 form-group dates_col" id="dates_vuelta">
+                                                <label for="dia_vuelta">Vuelta</label>
+                                                <div class="input-grup date datepicker" id="datepicker_vuelta">
+                                                    <i data-feather="calendar" class="icon_calender" id="vuelta_cal"></i>
+                                                    <input type="text" class="form-control p-0" id="dia_vuelta" placeholder="Elige fecha" required>
+                                                    <span class="input-group-addon"></span>
+                                                    <span class="error-form" id="error_message_vuelta"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- NR PASSENGERS -->
+                                        <div class="content form-group" id="passengers">
+                                            <label for="psg_num">Pasajero</label>
+                                            <div>
+                                                <select name="psg_num" id="psg_num" required>
+                                                    <option value="1" selected>1 pasajero</option>
+                                                    <option value="2">2 pasajeros</option>
+                                                    <option value="3">3 pasajeros</option>
+                                                    <option value="4">4 pasajeros</option>
+                                                    </select>
+                                                <i data-feather="chevron-down" class="icono"></i>
+                                                <span class="error-form" id="error_message_psg"></span>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-12 col-lg-2 in_row">
+                                    <!-- BUTTON -->
+                                    <button type="button" id="search">Buscar</button>
+                                </div>
+                            </div>
+                            <!-- END SECOND ROW -->
+
+                        </div>
+
+                        <div class="tab-pane container fade" id="hotels">
+
+                            <!-- ************* HOTELS ************* -->
+
+                            <!-- SECOND ROW - SEARCH BOX-->
+                            <div class="searchbox row">
+                                <div class="col-12 col-lg-10 in_row">
+                                    <form class="hotel-grid" id="searchFormHotel" method="GET">
+                                        <!-- DESTINATION -->
+                                        <div class="content form-group" id="destination_hotel">
+                                            <label for="destination">Destino</label>
+                                            <input type="text" class="form-control" id="checkin_hotel" name="destination" placeholder="Ciudad, país, ..." required>
+                                            <span class="error-form" id="error_message_destination_hotel"></span>
+                                        </div>
+                                        <!-- DATE container -->
+                                        <div class="content row dates_row">
+                                            <!-- CHECK IN -->
+                                            <div class="col-6 form-group dates_col" id="date_in">
+                                                <label for="day_in">Check in</label>
+                                                <div class="input-grup date datepicker" id="datepicker_in">
+                                                    <i data-feather="calendar" class="icon_calender" id="in_cal"></i>
+                                                    <input type="text" class="form-control p-0" name="checkIn" id="checkIn" placeholder="Elige fecha" required>
+                                                    <span class="input-group-addon"></span>
+                                                    <span class="error-form" id="error_message_in"></span>
+                                                </div>
+                                            </div>
+                                            <!-- CHECK OUT -->
+                                            <div class="col-6 form-group dates_col" id="dates_out">
+                                                <label for="checkOut">Check out</label>
+                                                <div class="input-grup date datepicker" id="datepicker_out">
+                                                    <i data-feather="calendar" class="icon_calender" id="out_cal"></i>
+                                                    <input type="text" class="form-control p-0" name="checkOut" id="checkOut" placeholder="Elige fecha" required>
+                                                    <span class="input-group-addon"></span>
+                                                    <span class="error-form" id="error_message_out"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- NR ADULTS -->
+                                        <div class="content form-group" id="adults_num">
+                                            <label for="adults1">Adultos</label>
+                                            <div>
+                                                <select name="adults1" id="adults1" required>
+                                                    <option value="1" selected>1 adulto</option>
+                                                    <option value="2">2 adultos</option>
+                                                    <option value="3">3 adultos</option>
+                                                    <option value="4">4 adultos</option>
+                                                </select>
+                                                <i data-feather="chevron-down" class="icono"></i>
+                                                <span class="error-form" id="error_message_adults"></span>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-12 col-lg-2 in_row">
+                                    <!-- BUTTON -->
+                                    <button type="button" id="searchHotel">Buscar</button>
+                                </div>
+                            </div>
+                            <!-- END SECOND ROW -->
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INSPIRATION -->
+    <section class="inspiration">
+        <div class="innerbox container">
+            <h3>Inspírate</h3>
+            <p>Aquí tienes algunas de nuestras recomendaciones para hacer de tus escapadas algo especial</p>
+
+            <div class="inspiration_fotos row">
+                <!-- EUROPEAN CITIES -->
+                <a href=" " class="col-12 col-sm-6 col-md-3">
+                    <div class="inspiration_item">
+                        <h5 id="insp1">Ciudades europeas</h5>
+                        <img src="imatges/inspirate/paris.png" alt="Foto de la Torre Eifel">
+                    </div>
+                </a>
+                <!-- BEACHES -->
+                <a href=" " class="col-12 col-sm-6 col-md-3">
+                    <div class="inspiration_item">
+                        <h5 id="insp2">Playas paradisíacas</h5>
+                        <img src="imatges/inspirate/playas.png" alt="Foto de una playa con palma">
+                    </div>
+                </a>
+                <!-- DISNEY -->
+                <a href=" " class="col-12 col-sm-6 col-md-3">
+                    <div class="inspiration_item">
+                        <h5 id="insp3">Disfruta en família</h5>
+                        <img src="imatges/inspirate/disney.png" alt="Foto del castillo de Disney">
+                    </div>
+                </a>
+                <!-- ADVENTURE -->
+                <a href=" " class="col-12 col-sm-6 col-md-3">
+                    <div class="inspiration_item">
+                        <h5 id="insp4">De aventura</h5>
+                        <img src="imatges/inspirate/aventura.png" alt="Foto de noche con dos tiendas de campaña en la montaña y cielo con estrellas">
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- USEFUL LINKS -->
+    <section class="useful_links">
+        <div class="container innerbox">
+            <h3>Enlaces útiles</h3>
+            <p>Accede rápidamente a aquello que más te interesa</p>
+
+            <div class="useful_links_content">
+                <!-- TIMETABLE -->
+                <a href=" ">
+                    <div class="link-item">
+                        <i data-feather="clock" class="icono"></i>
+                        <span>Horario de vuelos</span>
+                        <hr>
+                    </div>
+                </a>
+                <!-- LUGGAGE -->
+                <a href=" ">
+                    <div class="link-item">
+                        <i data-feather="briefcase" class="icono"></i>
+                        <span>Equipaje</span>
+                        <hr>
+                    </div>
+                </a>
+                <!-- FAQ -->
+                <a href=" ">
+                    <div class="link-item">
+                        <i data-feather="help-circle" class="icono"></i>
+                        <span>FAQ</span>
+                        <hr>
+                    </div>
+                </a>
+                <!-- CHECK-IN -->
+                <a href=" ">
+                    <div class="link-item">
+                        <i data-feather="map-pin" class="icono"></i>
+                        <span>Check in online</span>
+                        <hr>
+                    </div>
+                </a>
+                <!-- SPECIAL ASSISTANCE -->
+                <a href=" ">
+                    <div class="link-item">
+                        <i data-feather="user-check" class="icono"></i>
+                        <span>Asistencia especial</span>
+                        <hr>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- TOP DESTINATIONS -->
+    <section class="destinations">
+        <div class="container innerbox">
+            <h3>Top destinos</h3>
+            <p>Aquí tienes los destinos más solicitados con los mejores precios</p>
+
+            <div class="destination_content row">
+                <!-- JAPON -->
+                <a href=" " class="col-12 col-sm-6 col-md-4">
+                    <div class="destination_item">
+                        <h5>Japón</h5>
+                        <div><span class="small">Desde</span> <span class="h5">500€</span></div>
+                        <hr>
+                        <img src="imatges/top-destinos/japon.png" alt="Foto de un templo japonés al lago con bosque de fondo">
+                    </div>
+                </a>
+                <!-- NUEVA YORK -->
+                <a href=" " class="col-12 col-sm-6 col-md-4">
+                    <div class="destination_item">
+                        <h5>Nueva York</h5>
+                        <div><span class="small">Desde</span> <span class="h5">630€</span></div>
+                        <hr>
+                        <img src="imatges/top-destinos/ny.png" alt="Foto de la skyline de Manhattan">
+                    </div>
+                </a>
+                <!-- BERLÍN -->
+                <a href=" " class="col-12 col-sm-6 col-md-4">
+                    <div class="destination_item">
+                        <h5>Berlín</h5>
+                        <div><span class="small">Desde</span> <span class="h5">220€</span></div>
+                        <hr>
+                        <img src="imatges/top-destinos/berlin.png" alt="Foto de un museo en Berlín">
+                    </div>
+                </a>
+                <!-- BUDAPEST -->
+                <a href=" " class="col-12 col-sm-6 col-md-4">
+                    <div class="destination_item">
+                        <h5>Budapest</h5>
+                        <div><span class="small">Desde</span> <span class="h5">370€</span></div>
+                        <hr>
+                        <img src="imatges/top-destinos/budapest.png" alt="Foto aéreo de Budapest con el río">
+                    </div>
+                </a>
+                <!-- SYDNEY -->
+                <a href=" " class="col-12 col-sm-6 col-md-4">
+                    <div class="destination_item">
+                        <h5>Sydney</h5>
+                        <div><span class="small">Desde</span> <span class="h5">840€</span></div>
+                        <hr>
+                        <img src="imatges/top-destinos/sidney.png" alt="Foto de la ópera de Sydney">
+                    </div>
+                </a>
+                <!-- REYKJAVIK -->
+                <a href=" " class="col-12 col-sm-6 col-md-4">
+                    <div class="destination_item">
+                        <h5>Reykjavik</h5>
+                        <div><span class="small">Desde</span> <span class="h5">675€</span></div>
+                        <hr>
+                        <img src="imatges/top-destinos/reykjavik.png" alt="Foto en el mar con una montaña de hielo de fondo">
+                    </div>
+                </a>
+            </div>
+        </div>
+
+    </section>
+</div>

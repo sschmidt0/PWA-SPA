@@ -1,0 +1,71 @@
+<!-- HOTEL GRID -->
+<section class="hotel-page">
+	<button type="button" class="btn btn-primary btn-back" title="Volver">
+		<i class="fa fa-angle-left"></i>
+		<span class="button-text">Volver a la lista de hoteles</span>
+	</button>
+
+	<div class="hotel-box">
+
+		<!-- LOADER GIF -->
+		<div class="loader" id="loaderHotel">
+			<img src="../imatges/carregant.gif" alt="Cargando...">
+		</div>
+
+
+		<h1 class="hotel-name"></h1>
+		<div class="star-rate"></div>
+		<p class="hotel-address"></p>
+
+
+		<!-- HOTEL WELCOME REWARD -->
+		<p class="hotel-reward"><span class="item-reward"></span><i data-feather="thumbs-up" class="reward-item"></i></p>
+
+
+		<!-- EVALUATION HOTEL REVIEW - CONTENT DYNAMICALLY LOADED -->
+		<div class="container-review-hotel"></div>
+
+
+		<!-- HOTEL IMAGES IN hotel-image-grid - CONTENT DYNAMICALLY LOADED -->
+		<h3 class="item-title">Fotos del hotel y de las habitaciones</h3>
+		<div class="carousel-container">
+			<!-- arrow buttons -->
+			<div class="arrow-items grid-left">
+				<i class="fa fa-chevron-circle-left"></i>
+			</div>
+			<div class="arrow-items grid-right">
+				<i class="fa fa-chevron-circle-right"></i>
+			</div>
+			<!-- fotos -->
+			<div class="carousel-slide">
+				<img class="hotel-image" id="fotoStart" src="" alt="Foto of hotel">
+			</div>
+		</div>
+		<!-- small fotos to choose from -->
+		<div class="hotel-images-grid" id="hotel-fotos"></div>
+
+
+		<!-- EVALUATION CATEGORY REVIEW - CONTENT DYNAMICALLY LOADED -->
+		<div class="container-review-items"></div>
+
+
+		<!-- FACILITIES - LIST CONTENT DYNAMICALLY LOADED -->
+		<!-- FACILITIES HOTEL -->
+		<h3 class="item-title" id="facilityCat1"></h3>
+		<div class="facilities" id="catList1"></div>
+
+
+		<!-- FACILITIES ROOMS -->
+		<h3 class="item-title" id="facilityCat2"></h3>
+		<div class="facilities" id="catList2"></div>
+
+
+		<!-- NEIGHBOURHOOD DESCRIPTION -->
+		<div class="hotel-neighbourhood">
+			<h3 class="neighbourhood-title">Sobre la localización del hotel: <span class="neighbourhood-hotelTitle"></span></h3>
+			<p class="neighbourhood-description"></p>
+		</div>
+
+	</div>
+
+</section>

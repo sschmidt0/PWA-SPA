@@ -1,0 +1,77 @@
+// ************** ALERT WINDOW LOGIN **************
+.overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    align-items: center;
+    justify-items: center;
+    z-index: 9999;
+    overflow: hidden;
+    .overlay-inner {
+        margin: 0;
+        padding: 0;
+        form {
+            display: none;
+            box-sizing: border-box;
+            min-width: 360px;
+            width: 50vw;
+            max-width: 600px;
+            margin: auto;
+            background-color: $uoc_clar;
+            padding: 50px;
+            .form-group {
+                label {
+                    font-size: 17px;
+                    font-weight: 600;
+                }
+            }
+            .error-inici {
+                display: block;
+                color: red;
+                font-size: 17px;
+            }
+            .buttonGroup {
+                padding: 0;
+                margin: 50px 0 20px;
+                display: flex;
+                justify-content: space-between;
+                button {
+                    width: 48%;
+                }
+                #iniciSessio {
+                    background-color: $uoc_dark;
+                }
+                #tancar {
+                    color: $uoc_dark;
+                    border-color: $uoc_dark;
+                    &:hover {
+                        background-color: $uoc_dark;
+                        opacity: 60%;
+                        color: #fff;
+                        transition: .2s ease-in-out;
+                    }
+                }
+                #iniciSessio,
+                #tancar {
+                    &:hover {
+                        @extend %img_hover;
+                    }
+                }
+            }
+            .state_message {
+                display: block;
+                font-size: 15px;
+            }
+            #success_message {
+                color: green;
+            }
+            #error_message {
+                color: red;
+            }
+        }
+    }
+}

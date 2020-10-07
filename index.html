@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- MANIFEST FOR PWA -->
+    <link rel="manifest" href="/manifest.json">
+    <!-- ios support -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#000078">
+    <meta name="apple-mobile-web-app-title" content="UOCAir">
+    <meta name="application-name" content="UOC Air">
+    <link rel="apple-touch-icon" href="/imatges/icons/icon-128x128.png">
+    <link rel="apple-touch-icon" href="/imatges/icons/icon-144x144.png">
+    <link rel="apple-touch-icon" href="/imatges/icons/icon-152x152.png">
+    <link rel="apple-touch-icon" href="/imatges/icons/icon-192x192.png">
+    <link rel="apple-touch-icon" href="/imatges/icons/icon-256x256.png">
+    <link rel="apple-touch-icon" href="/imatges/icons/icon-512x512.png">
+    <meta name="description" content="UOCAir Airline - vuelos y hoteles baratos">
+    <meta name="theme-color" content="#000078">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- JS for navbar to work correctly -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!-- FEATHER ICONS -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- BOOTSTRAP DATEPICKER -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker3.css" rel="stylesheet" id="bootstrap-css">
+
+    <!-- CDN JQUERY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <title>UOCAIR - La teva companyia aèria</title>
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <header>
+        <nav class="navbar navbar-expand-md navbar-light">
+            <!-- BRAND -->
+            <a class="navbar-brand" id="logo" href="#">
+                <img src="logos/uocair_logo.png" alt="Logo de UOCAIR">
+            </a>
+            <!-- TOGGLER -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- BUTTONS -->
+            <div class="collapse navbar-collapse nav_btn" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li>
+                        <a href="" class="nav-link btn" id="btn1" role="button">Inicia sesión</a>
+                    </li>
+                    <li>
+                        <a href="" class="nav-link btn" id="btn2" role="button">Regístrate</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- OVERLAY FOR ENTER SESSION -->
+    <div class="overlay">
+        <div class="overlay-inner">
+            <form id="login">
+                <div class="form-group">
+                    <label for="email" class="col-form-label">Correo</label>
+                    <input type="email" class="form-control" id="email" placeholder="Correo:">
+                </div>
+                <div class="form-group">
+                    <label for="password" class="col-form-label">Contraseña</label>
+                    <input type="password" class="form-control" id="password" placeholder="Contraseña:">
+                </div>
+                <div class="buttonGroup">
+                    <button type="submit" class="btn btn-primary" id="iniciSessio">Iniciar sesión</button>
+                    <button type="submit" class="btn btn-outline-light" id="tancar">Cerrar</button>
+                </div>
+                <span class="state_message" id="success_message"></span>
+                <span class="state_message" id="error_message"></span>
+            </form>
+        </div>
+    </div>
+
+    <main class="page-home">
+
+        <!-- INSERT CONTENT DYNAMICALLY -->
+
+        <!-- LOADER GIF -->
+		<div class="loader" id="loaderHotel">
+			<img src="../imatges/carregant.gif" alt="Cargando...">
+		</div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <!-- FIRST ROW - OVERVIEW LINKS -->
+        <div class="row container innerbox">
+            <div class="col-6 col-md-3 linkbox">
+                <h5>Vuelos</h5>
+                <ul>
+                    <li>
+                        <a href="">Seguimiento de vuelos</a></li>
+                    <li>
+                        <a href="">Gestionar reservas</a></li>
+                    <li>
+                        <a href="">Guías de viaje</a></li>
+                    <li>
+                        <a href="">Mapa de ruta</a></li>
+                    <li>
+                        <a href="">Supera tu miedo a volar</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-md-3 linkbox">
+                <h5>Atención al cliente</h5>
+                <ul>
+                    <li>
+                        <a href="">Accesibilidad</a></li>
+                    <li>
+                        <a href="">El compromiso con los clientes</a></li>
+                    <li>
+                        <a href="">Ayuda</a></li>
+                    <li>
+                        <a href="">Vuelos afectados hoy</a></li>
+                    <li>
+                        <a href="">Mapa del sitio</a></li>
+                    <li>
+                        <a href="">Asistencia especial</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-md-3 linkbox">
+                <h5>Sobre nosotros</h5>
+                <ul>
+                    <li>
+                        <a href="">Anúnciate con nosotros</a></li>
+                    <li>
+                        <a href="">Empleo</a></li>
+                    <li>
+                        <a href="">Info sobre la compañía</a></li>
+                    <li>
+                        <a href="">Centro de prensa</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-md-3 linkbox">
+                <h5>La letra pequeña</h5>
+                <ul>
+                    <li>
+                        <a href="">Política de uso aceptable</a></li>
+                    <li>
+                        <a href="">Política de cookies</a></li>
+                    <li>
+                        <a href="">Comisiones y recargos</a></li>
+                    <li>
+                        <a href="">Política de privacidad</a></li>
+                    <li>
+                        <a href="">Términos y condiciones</a></li>
+                </ul>
+            </div>
+        </div>
+
+
+        <!-- SECOND ROW -->
+        <div class="last_line">
+            <span>Tecnologías y herramientas para el desarrollo web 2020</span>
+            <span>Sarah Schmidt</span>
+        </div>
+    </footer>
+
+    <!-- DATEPICKER JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/js/bootstrap-datepicker.min.js"></script>
+    <script src="js/datepicker.js"></script>
+    <!-- COSTUM JS -->
+    <script src="js/app.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/hotels.js"></script>
+</body>
+
+</html>
